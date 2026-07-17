@@ -827,21 +827,15 @@ function attachTabEvents(){
   document.getElementById('app').innerHTML = `<div class="login-wrap"><div style="color:#fff;font-family:'Bebas Neue';font-size:22px;">Carregando painel…</div></div>`;
   await loadAll();
   render();
-})();
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
 const supabase = window.supabase.createClient(
     "https://orwyrjgqqpfndfafmexq.supabase.co",
     "sb_publishable_n41ielYl4yml_6ewsFaiUg_SvRolYv7"
+);
 
-  <script>
-const supabase = window.supabase.createClient(
-    "https://orwyrjgqqpfndfafmexq.supabase.co",
-    "sb_publishable_n41ielYl4yml_6ewsFaiUg_SvRolYv7"
-
-  async function testarConexao() {
+async function testarConexao() {
     const { data, error } = await supabase
         .from("times")
         .select("*");
@@ -854,9 +848,7 @@ const supabase = window.supabase.createClient(
 }
 
 testarConexao();
-);
 </script>
-);
-</script>
+
 </body>
 </html>
