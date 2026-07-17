@@ -830,25 +830,18 @@ function attachTabEvents(){
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-const supabase = window.supabase.createClient(
-    "https://orwyrjgqqpfndfafmexq.supabase.co",
-    "sb_publishable_n41ielYl4yml_6ewsFaiUg_SvRolYv7"
+const sb = window.supabase.createClient(
+  "https://orwyrjgqqpfndfafmexq.supabase.co",
+  "SUA_CHAVE"
 );
 
 async function testarConexao() {
-    const { data, error } = await supabase
-        .from("times")
-        .select("*");
+  const { data, error } = await sb
+    .from("times")
+    .select("*");
 
-    if (error) {
-        console.error(error);
-    } else {
-        console.log(data);
-    }
+  console.log(data, error);
 }
 
 testarConexao();
 </script>
-
-</body>
-</html>
