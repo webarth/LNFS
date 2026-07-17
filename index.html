@@ -840,6 +840,20 @@ const supabase = window.supabase.createClient(
 const supabase = window.supabase.createClient(
     "https://orwyrjgqqpfndfafmexq.supabase.co",
     "sb_publishable_n41ielYl4yml_6ewsFaiUg_SvRolYv7"
+
+  async function testarConexao() {
+    const { data, error } = await supabase
+        .from("times")
+        .select("*");
+
+    if (error) {
+        console.error(error);
+    } else {
+        console.log(data);
+    }
+}
+
+testarConexao();
 );
 </script>
 );
